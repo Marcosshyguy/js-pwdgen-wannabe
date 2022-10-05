@@ -1,14 +1,19 @@
 //user input
-let passwordEnd = "21"
+let passwordEnd = 21
 console.log(passwordEnd);
-const naMe = prompt("What's your name?");
-const surname = prompt("What's your surname?");
-const color = prompt("What's your favourite color?");
-console.log( naMe,surname,color);
+const passwordEndString = passwordEnd.toString();   //example of how to convert a number to string
+console.log(passwordEndString ,typeof(passwordEndString), typeof(passwordEnd));
+
+const userName = prompt("What's your name?");
+const userSurname = prompt("What's your surname?");
+const userColor = prompt("What's your favourite color?"); 
+console.log(userName,userSurname,userColor);
+const userLuckyNumber = parseInt (prompt ("What's your lucky number")); //example for me to understand how parseint works.
+console.log(userLuckyNumber, typeof(userLuckyNumber));  //example for me to understand how typeof works.
 
 //data processing
-const password = naMe + surname + color + passwordEnd;
-console.log(password);
+const password = ` ${userName}  ${userSurname} ${" "} ${userColor} ${passwordEndString} ${userLuckyNumber}`; //in this case when you add a single string to a number the result is always a string 
+console.log(password, typeof(password));
 
 //output
 document.getElementById("password-generated").innerHTML = password
